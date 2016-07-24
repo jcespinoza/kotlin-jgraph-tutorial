@@ -4,6 +4,7 @@ import complex.ComplexClass;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import org.junit.Assert;
 import specs.SpecContext;
 
 public class ComplexClassSteps {
@@ -24,6 +25,6 @@ public class ComplexClassSteps {
     @Then("^it should return (\\d+)$")
     public void itShouldReturn(int expectedResult) throws Throwable {
         int actualResult = (int)SpecContext.context.get("result");
-        assert(actualResult == expectedResult );
+        Assert.assertTrue(actualResult == expectedResult );
     }
 }
